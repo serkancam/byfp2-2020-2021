@@ -1,0 +1,18 @@
+import turtle
+ku=int(input("kena uzunluğu gir:"))
+renk=input("renk gir:")
+turtle.shape("turtle")
+turtle.color("red")
+turtle.begin_fill()
+turtle.fd(ku)
+turtle.left(90)
+turtle.fd(ku)
+turtle.left(90)
+turtle.fd(ku)
+turtle.left(90)
+turtle.fd(ku)
+turtle.left(90)
+turtle.color(renk)
+turtle.end_fill()
+
+turtle.done()
