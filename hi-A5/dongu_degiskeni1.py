@@ -2,15 +2,15 @@ import turtle as t
 
 t.pensize(5)
 
-for uzunluk in range(10,101,10):
+for u in range(10,101,10):
     t.left(90)
-    t.forward(uzunluk)
-    t.backward(uzunluk)
+    t.forward(u)
+    t.backward(u)
     t.right(90)
     t.penup()
     t.forward(10)
     t.pendown()
-
+t. done()
 # #10 luk
 # t.left(90)
 # t.forward(10)
@@ -35,4 +35,3 @@ for uzunluk in range(10,101,10):
 # t.forward(10)
 # t.pendown()
 
-t.done()
