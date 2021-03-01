@@ -1,38 +1,25 @@
-import turtle
-turtle.Screen().setup(600,600)
-turtle.shape("turtle")
-turtle.penup()
-turtle.goto(-300,100)
-turtle.pendown()
-turtle.color("red")
-turtle.begin_fill()
-for i in range(2):
-	turtle.forward(200)
-	turtle.left(90)
-	turtle.forward(100)
-	turtle.left(90)
-turtle.end_fill()
-turtle.penup()
-turtle.goto(-260,120)
-turtle.color("white")
-turtle.begin_fill()
-turtle.circle(30)
-turtle.end_fill()
-turtle.goto(-260,125)
-turtle.pendown()
-turtle.color("red")
-turtle.begin_fill()
-turtle.circle(25)
-turtle.end_fill()
-turtle.penup()
-turtle.goto(-100,160)
-turtle.pendown()
-turtle.color("white")
-turtle.begin_fill()
-for i in range(5):
-	turtle.forward(25)
-	turtle.left(144)
-turtle.end_fill()
+import logging
+import threading
+import time
 
-turtle.hideturtle()
-turtle.done()
+def thread_function(name):
+    logging.info("Thread %s: starting", name)
+    time.sleep(2)
+    logging.info("Thread %s: finishing", name)
+
+if __name__ == "__main__":
+    format = "%(asctime)s: %(message)s"
+    logging.basicConfig(format=format, level=logging.INFO,
+                        datefmt="%H:%M:%S")
+
+    threads = list()
+    for index in range(3):
+        logging.info("Main    : create and start thread %d.", index)
+        x = threading.Thread(target=thread_function, args=(index,))
+        threads.append(x)
+        x.start()
+
+    for index, thread in enumerate(threads):
+        logging.info("Main    : before joining thread %d.", index)
+        thread.join()
+        logging.info("Main    : thread %d done", index)
