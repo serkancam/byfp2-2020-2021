@@ -24,3 +24,5 @@ for s in l:
     toplam = toplam+s
 ortalama = toplam/len(l)
 print("ortalama:",ortalama)
+
+# listede ortalama değere en yakın sayıyı bulunuz.
