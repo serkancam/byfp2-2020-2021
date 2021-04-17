@@ -1,4 +1,3 @@
-listem=[]
-
-for i in range(10000000000):
-    listem.append(i)
+yaslar=["41","53"]
+int(yaslar)
+print(yaslar)
