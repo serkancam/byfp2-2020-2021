@@ -1,0 +1,5 @@
+Matematik: 70 80
+Türkçe: 85 90
+Sosyal Bilgiler: 90 100
+Fen Bilimleri: 95 100
+İngilizce:80 85
