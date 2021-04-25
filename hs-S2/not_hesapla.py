@@ -8,5 +8,5 @@ for ders in satirlar:
     ort = 0
     for nt in notlar:
         ort = ort + float(nt)
-    ort = ort /len(notlar)
+    ort = ort / len(notlar)
     print(ders_adi,"=",round(ort,2))
