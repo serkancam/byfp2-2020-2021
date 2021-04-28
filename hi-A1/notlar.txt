@@ -1,12 +1,5 @@
-matematik: 70 80
+matematik: 70 80 90
 fen bilgisi: 80 90
 sosyal bilgiler: 90 95
-Türkçe: 85 80
-
-
-
-
-
-
-
-
+Türkçe: 85 80 90 95
+İngilizce:80 95
